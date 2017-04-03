@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ page.title }}</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla:700|Poppins:700|Work+Sans:800" rel="stylesheet">
+    <link rel="stylesheet" media="all" href="{{ site.baseurl }}/assets/css/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $('.uno').on('click', function(){
+        $('html, body').animate({scrollTop: $("#div_id").offset().top}, 'slow');
+      });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+  </head>
+  <body class="{{ page.layout }}">
+    <main class="wrap-page">
+  <header class="header-main">
+      <h1 class="header-main-logo"><a href="/"><img src="{{ baseurl }}/assets/images/logo-ess@3x.png" alt="ESS Consultants" /></a></h1>
+      <nav class="nav-main">
+        <ul class="nav-main-list">
+          <li class="nav-main-list-item"><a class="" href="#about">About</a></li>
+          <li class="nav-main-list-item"><a href="#services">Services</a></li>
+          <li class="nav-main-list-item"><a href="#contact">Contact</a></li>
+      </nav>
+  </header>
