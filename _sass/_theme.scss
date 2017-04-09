@@ -46,7 +46,9 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 $layoutpadding-small;
     font-size: 48px;
   }
-
+  @include mq(small) {
+    font-size: 42px;
+  }
 }
 .title-sub {
   font-size: 48px;
@@ -55,7 +57,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Source Sans Pro';
   margin: 1em 0;
   padding: 0 $layoutpadding;
-
+  @include mq(small) {
+  }
   @include mq(medium) {
     padding: 0 $layoutpadding-small;
     font-size: 32px;
@@ -174,6 +177,7 @@ section {
   min-height: 250px;
   padding: $layoutpadding;
   color: white;
+
   @include mq(medium) {
     padding: 100px $layoutpadding-small;
 
@@ -226,7 +230,9 @@ section {
 .section-header {
   font-size: 56px;
   margin-bottom: 1em;
-
+  @include mq(small) {
+    margin-top: $layoutpadding;
+  }
   @include mq(medium) {
     font-size: 36px;
   }
