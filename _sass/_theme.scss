@@ -106,17 +106,33 @@ section {
     min-height: 600px;
     margin: 2em 0 1em;
     box-sizing: border-box;
-
-    @include mq(medium) {
+    @include mq(large) {
       width: 100%;
       float: none;
+      margin: 0 auto;
+    }
+    @include mq(medium) {
+      width: 75%;
+      float: none;
       min-height: none;
-      margin: 1em 0;
+      margin: 1em auto;
     }
 
     &:nth-of-type(2) {
       margin-left: 2%;
       margin-right: 2%;
+      @include mq(large) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @include mq(medium) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    @include mq(small) {
+      width: 100%;
     }
 
     h1 {
