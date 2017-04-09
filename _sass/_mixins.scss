@@ -11,24 +11,13 @@
 		}
 	}
 	@else if $point==medium {
-		@media (max-width: 1096px) {
+		@media (max-width: 991px) {
 			@content;
 		}
 	}
-	@else if $point==lower-medium {
-		@media (max-width: 900px) {
-			@content;
-		}
-	}
-	@else if $point==smartphone {
+	@else if $point==small {
 		@media (max-width: 767px) {
 			@content;
 		}
 	}
-	@else if $point==small-smartphone {
-		@media (max-width: 480px) {
-			@content;
-		}
-	}
-
 }

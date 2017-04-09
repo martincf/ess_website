@@ -14,6 +14,11 @@ h1, h2, h3, h4, h5, h6 {
   display: table;
   clear: both;
   }
+
+  @include mq(medium) {
+    padding: 0 $layoutpadding-small;
+  }
+
 }
 .header-main-logo {
   float: left;
@@ -28,10 +33,6 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
   }
 }
-// Footer
-.footer {
-
-}
 .title {
   font-size: 80px;
   text-decoration: underline;
@@ -40,9 +41,12 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
   margin: 1em 0;
   padding: 0 $layoutpadding;
-  @include mq(lower-medium) {
 
+  @include mq(medium) {
+    padding: 0 $layoutpadding-small;
+    font-size: 48px;
   }
+
 }
 .title-sub {
   font-size: 48px;
@@ -51,6 +55,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Source Sans Pro';
   margin: 1em 0;
   padding: 0 $layoutpadding;
+
+  @include mq(medium) {
+    padding: 0 $layoutpadding-small;
+    font-size: 32px;
+    margin-bottom: 0;
+  }
+
 }
 
 .content {
@@ -59,6 +70,11 @@ h1, h2, h3, h4, h5, h6 {
 .text-large {
   font-size: 2vw;
   font-weight: 300;
+
+  @include mq(medium) {
+    font-size: 18px;
+  }
+
 }
 // Sections
 section {
@@ -73,6 +89,15 @@ section {
     &:nth-of-type(odd) {
       margin-right: 5%;
     }
+
+    @include mq(medium) {
+      width: 100%;
+      float: none;
+      &:nth-of-type(odd) {
+        margin-right: 0;
+      }
+    }
+
   }
   .col3 {
     background-color: lighten($grey, 70%);
@@ -81,17 +106,33 @@ section {
     min-height: 600px;
     margin: 2em 0 1em;
     box-sizing: border-box;
-
-    @include mq(medium) {
+    @include mq(large) {
       width: 100%;
       float: none;
+      margin: 0 auto;
+    }
+    @include mq(medium) {
+      width: 75%;
+      float: none;
       min-height: none;
-      margin: 1em 0;
+      margin: 1em auto;
     }
 
     &:nth-of-type(2) {
       margin-left: 2%;
       margin-right: 2%;
+      @include mq(large) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @include mq(medium) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    @include mq(small) {
+      width: 100%;
     }
 
     h1 {
@@ -126,18 +167,27 @@ section {
     border-bottom: 1px solid $red;
   }
 }
+
 .section-about {
   background-color: #013A6B;
   background-image: -webkit-linear-gradient(88deg, $red 90%, #fff 90%);
   min-height: 250px;
   padding: $layoutpadding;
   color: white;
+  @include mq(medium) {
+    padding: 100px $layoutpadding-small;
+
+  }
 }
 .section-services {
   background-color: #013A6B;
   background-image: -webkit-linear-gradient(90.5deg, #fff 99%, $red 99%);
   min-height: 800px;
   padding: $layoutpadding;
+  @include mq(medium) {
+    padding: 100px $layoutpadding-small;
+  }
+
   .section-header {
     color: $red;
   }
@@ -148,6 +198,9 @@ section {
   min-height: 100px;
   padding: $layoutpadding;
   color: white;
+  @include mq(medium) {
+    padding: 100px $layoutpadding-small;
+  }
 
   p {
     span {
@@ -165,10 +218,19 @@ section {
 .footer {
   background-image: -webkit-linear-gradient(90.5deg, #fff 95%, $grey 95%);
   padding: 75px $layoutpadding;
+  @include mq(medium) {
+    padding: $layoutpadding-small;
+  }
+
 }
 .section-header {
   font-size: 56px;
   margin-bottom: 1em;
+
+  @include mq(medium) {
+    font-size: 36px;
+  }
+
 }
 
 // LISTS
@@ -193,10 +255,20 @@ section {
 .nav-main {
   float: right;
   margin-top: 25px;
+  @include mq(medium) {
+    float: none;
+    clear: both;
+  }
+
 }
 .nav-main-list-item {
   display: inline-block;
   margin-left: 1.5em;
+
+  @include mq(medium) {
+    margin: 50px 1.5em 0 0;
+  }
+
 
   a:link, a:visited {
     color: $red;
