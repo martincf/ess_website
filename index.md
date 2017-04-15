@@ -5,7 +5,7 @@ layout: default
 
 <h2 class="title">Event, production and venue safety consultancy.</h2>
 
-<h3 class="title-sub"> ESS provide health and safety support, crowd management planning, food safety support and licensing assistance to events, productions, venues and businesses.</h3>
+<h3 class="title-sub">ESS provide health and safety support, crowd management planning, food safety support and licensing assistance to events, productions, venues and businesses.</h3>
 
 <section class="section-about" id="about">
   <h1 class="section-header">About</h1>
