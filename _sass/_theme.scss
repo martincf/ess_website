@@ -172,6 +172,7 @@ section {
 }
 
 .section-about {
+  background-color: $red;
   background-image: -webkit-linear-gradient(88deg, $red 90%, #fff 90%);
   min-height: 250px;
   padding: $layoutpadding;
@@ -186,6 +187,7 @@ section {
   }
 }
 .section-services {
+  background-color: white;
   background-image: -webkit-linear-gradient(90.5deg, #fff 99%, $red 99%);
   min-height: 800px;
   padding: $layoutpadding;
@@ -200,6 +202,7 @@ section {
   }
 }
 .section-contact {
+  background-color: $grey;
   background-image: -webkit-linear-gradient(88deg, $grey 90%, #fff 90%);
   min-height: 100px;
   padding: $layoutpadding;
